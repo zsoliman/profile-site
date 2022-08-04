@@ -1,5 +1,5 @@
 .App {
-  background-color: #F0E5CF;
+  background-color: #30475E;
   height: 120%;
 
 }
@@ -8,11 +8,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-shrink: 1;
-  color: #4B6587;
-  background-color: #F0E5CF;
-  height: 10vh;
+  color: #F5F5F5;
+  background-color: #30475E;
   font-family:monospace;
   font-size: 200%;
 /* sticky nav */
@@ -24,20 +23,32 @@
 .Nav a{
   display: flex;
   transition: transform 0.5s;
+  transition: 0.4s;
+  padding: 15px 32px;
+
 }
 .Nav h3{
   display: flex;
   /* align-items: flex-start; */
   transition: transform 0.5s;
+  transition: 0.4s;
+  padding: 15px 32px;
+
+
 }
 
 .Nav a:hover {
   cursor: pointer;
   transform: scale(1.1);
+  color: #F7F6F2;
+  background-color: #F05454;
 }
 .Nav h3:hover {
   cursor: pointer;
   transform: scale(1.1);
+  color: #F7F6F2;
+  background-color: #F05454;
+
 }
 
 .menuButton {
@@ -85,8 +96,8 @@
 
  .Header {
   padding-top: 10vh;
-  background-color: #F7F6F2;
-  color: #4B6587;
+  background-color: #30475E;
+  color: #F5F5F5;
   font-family:monospace;
   font-size: 200%;
   padding-bottom: 2vh;
@@ -94,27 +105,52 @@
 
 .section {
   padding-top: 10vh;
-  background-color: #F0E5CF;
-  color: #4B6587;
+  background-color: #F5F5F5;
+  color: #30475E;
   font-family:monospace;
   font-size: 200%;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 5%
+}
+
+.contactIcon {
+  transition: transform 0.5s;
+}
+
+.contactIcon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .buttonDiv {
   display: flex;
   justify-content: center;
+  padding: 2vh;
 }
 
 .button {
-  background-color: #4B6587;
+  background-color: #30475E;
   border: none;
-  color: #F0E5CF;
+  color: #F7F6F2;
+  font-family:monospace;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  transition: transform 0.5s;
+  transition: 0.4s;
+}
+
+.button:hover {
   cursor: pointer;
-
-
+  transform: scale(1.1);
+  color: #F7F6F2;
+  background-color: #F05454;
 }

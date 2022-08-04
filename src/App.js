@@ -35,12 +35,12 @@ const App = () => {
     <div className="App">
 
       <div className="Nav">
-        <h3 onClick={handleTitleClick}>ZS &nbsp;&nbsp;&nbsp;</h3>
+        <h3 onClick={handleTitleClick}>ZS</h3>
         <button onClick={toggleMenu} className="menuButton">Menu</button>
-        <a onClick={handleAboutClick} > about &nbsp;&nbsp;&nbsp;</a>
-        <a onClick={handleProjectClick} > projects &nbsp;&nbsp;&nbsp;</a>
-        <a onClick={handleContactClick} > contact &nbsp;&nbsp;&nbsp;</a>
-        <a onClick={handleResumeClick} > resume</a>
+        <a onClick={handleAboutClick} >about</a>
+        <a onClick={handleProjectClick} >projects</a>
+        <a onClick={handleContactClick} >contact</a>
+        <a onClick={handleResumeClick} >resume</a>
       </div>
 
 
@@ -92,6 +92,13 @@ const App = () => {
       <div ref={contactRef} className="section">
         <h2 className="Title">Contact</h2>
         <p className="Subtitle">A few ways to get in touch...</p>
+        <div className='contact'>
+          <img className='contactIcon' src="https://img.icons8.com/glyph-neue/344/github.png" style={{height:'200px', width:'auto'}}/>
+          <img className='contactIcon' src="https://img.icons8.com/glyph-neue/344/linkedin.png" style={{height:'200px', width:'auto'}}/>
+          <img className='contactIcon' src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png" style={{height:'200px', width:'auto'}}/>
+          <img className='contactIcon' src="https://img.icons8.com/glyph-neue/344/instagram-new.png" style={{height:'200px', width:'auto'}}/>
+        </div>
+
       <br/>
       <br/>
       <br/>
@@ -124,7 +131,7 @@ const App = () => {
       <div className="buttonDiv">
         <button className="button" onClick={handleTitleClick}>Back to Top</button>
       </div>
-      <p style={{marginBottom: '0px', color: '#191919'}}>.</p>
+    
 
     </div>
   );
