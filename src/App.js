@@ -114,11 +114,7 @@ const App = () => {
           src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png"
           style={{height:'200px', width:'auto'}}
           /></a>
-          <img
-          className='contactIcon'
-          src="https://img.icons8.com/glyph-neue/344/instagram-new.png"
-          style={{height:'200px', width:'auto'}}
-          />
+      
         </div>
 
 
