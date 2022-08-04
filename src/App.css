@@ -6,8 +6,9 @@
 
 .Nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
+  height: 10vh;
   justify-content: space-evenly;
   flex-shrink: 1;
   color: #F5F5F5;
@@ -63,7 +64,10 @@
     display: none;
   }
   .Nav h3 {
-     margin-left: 15%;
+     margin-left: 25%;
+     /* margin-top: 0; */
+     font-size: 275%;
+
     }
   .Nav a {
     margin-left: 0;

@@ -93,28 +93,40 @@ const App = () => {
         <h2 className="Title">Contact</h2>
         <p className="Subtitle">A few ways to get in touch...</p>
         <div className='contact'>
-          <img className='contactIcon' src="https://img.icons8.com/glyph-neue/344/github.png" style={{height:'200px', width:'auto'}}/>
-          <img className='contactIcon' src="https://img.icons8.com/glyph-neue/344/linkedin.png" style={{height:'200px', width:'auto'}}/>
-          <img className='contactIcon' src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png" style={{height:'200px', width:'auto'}}/>
-          <img className='contactIcon' src="https://img.icons8.com/glyph-neue/344/instagram-new.png" style={{height:'200px', width:'auto'}}/>
+
+          <a href="https://github.com/zsoliman" target="_blank">
+          <img
+          className='contactIcon'
+          src="https://img.icons8.com/glyph-neue/344/github.png"
+          style={{height:'200px', width:'auto'}}
+          /></a>
+
+          <a href="https://www.linkedin.com/in/zachsoliman/" target='_blank'>
+          <img
+          className='contactIcon'
+          src="https://img.icons8.com/glyph-neue/344/linkedin.png"
+          style={{height:'200px', width:'auto'}}
+          /></a>
+
+          <a href="https://medium.com/@zachsoliman" target='_blank'>
+          <img
+          className='contactIcon'
+          src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png"
+          style={{height:'200px', width:'auto'}}
+          /></a>
+          <img
+          className='contactIcon'
+          src="https://img.icons8.com/glyph-neue/344/instagram-new.png"
+          style={{height:'200px', width:'auto'}}
+          />
         </div>
 
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+
       </div>
 
       <div ref={resumeRef} className="section">
         <h2 className="Title">Resume</h2>
-        <p className="Subtitle">A few ways to get in touch...</p>
+        <p className="Subtitle">Take a look...</p>
       <br/>
       <br/>
       <br/>
@@ -131,7 +143,7 @@ const App = () => {
       <div className="buttonDiv">
         <button className="button" onClick={handleTitleClick}>Back to Top</button>
       </div>
-    
+
 
     </div>
   );
