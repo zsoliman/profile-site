@@ -45,16 +45,15 @@ const App = () => {
 
 
       <div ref={titleRef} className="Header">
-        <p
-        style={{paddingTop: '20px'}}
-        className="Subtitle"
-        >hi, my name is...</p>
+        <div className='HeaderContainer'>
+        <p style={{paddingTop: '20px'}} className="Subtitle">hi, my name is...</p>
         <h1 className="Title">Zach Soliman</h1>
         <p className="Subtitle">and I'm a...</p>
         <h2
         style={{paddingBottom: '20px'}}
         className="Title"
         >Software Engineer</h2>
+      </div>
       </div>
 
       <div ref={aboutRef} className="section">
@@ -114,7 +113,7 @@ const App = () => {
           src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png"
           style={{height:'200px', width:'auto'}}
           /></a>
-      
+
         </div>
 
 
@@ -137,7 +136,7 @@ const App = () => {
       </div>
 
       <div className="buttonDiv">
-        <button className="button" onClick={handleTitleClick}>Back to Top</button>
+        <button className="button" onClick={handleTitleClick}>&#8593;</button>
       </div>
 
 
