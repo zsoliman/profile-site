@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 const App = () => {
+
 
   // useRef allows scroll-to-element
   const titleRef = useRef()
@@ -27,16 +28,25 @@ const App = () => {
     resumeRef.current.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const toggleMenu = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log('window.scrollY', window.scrollY);
+    };
 
-  }
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
+
     <div className="App">
 
       <div className="Nav">
         <h3 onClick={handleTitleClick}>ZS</h3>
-        <button onClick={toggleMenu} className="menuButton">Menu</button>
+        <button className="menuButton">Menu</button> {/* hidden menu button, not currently doing anything */}
         <a onClick={handleAboutClick} >about</a>
         <a onClick={handleProjectClick} >projects</a>
         <a onClick={handleContactClick} >contact</a>
@@ -46,46 +56,26 @@ const App = () => {
 
       <div ref={titleRef} className="Header">
         <div className='HeaderContainer'>
-        <p style={{paddingTop: '20px'}} className="Subtitle">hi, my name is...</p>
-        <h1 className="Title">Zach Soliman</h1>
-        <p className="Subtitle">and I'm a...</p>
-        <h2
-        style={{paddingBottom: '20px'}}
-        className="Title"
-        >Software Engineer</h2>
-      </div>
+          <p style={{ paddingTop: '20px' }} className="Subtitle">hi, my name is...</p>
+          <h1 className="Title">Zach Soliman</h1>
+          <p className="Subtitle">and I'm a...</p>
+          <h2
+            style={{ paddingBottom: '20px' }}
+            className="Title"
+          >Software Engineer</h2>
+        </div>
       </div>
 
       <div ref={aboutRef} className="section">
         <h2 className="Title">About</h2>
         <p className="Subtitle">A little bit about myself...</p>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+
       </div>
 
       <div ref={projectRef} className="section">
         <h2 className="Title">Projects</h2>
         <p className="Subtitle">Here's some work I've done...</p>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+
       </div>
 
       <div ref={contactRef} className="section">
@@ -94,25 +84,25 @@ const App = () => {
         <div className='contact'>
 
           <a href="https://github.com/zsoliman" target="_blank">
-          <img
-          className='contactIcon'
-          src="https://img.icons8.com/glyph-neue/344/github.png"
-          style={{height:'200px', width:'auto'}}
-          /></a>
+            <img
+              className='contactIcon'
+              src="https://img.icons8.com/glyph-neue/344/github.png"
+              style={{ height: '200px', width: 'auto' }}
+            /></a>
 
           <a href="https://www.linkedin.com/in/zachsoliman/" target='_blank'>
-          <img
-          className='contactIcon'
-          src="https://img.icons8.com/glyph-neue/344/linkedin.png"
-          style={{height:'200px', width:'auto'}}
-          /></a>
+            <img
+              className='contactIcon'
+              src="https://img.icons8.com/glyph-neue/344/linkedin.png"
+              style={{ height: '200px', width: 'auto' }}
+            /></a>
 
           <a href="https://medium.com/@zachsoliman" target='_blank'>
-          <img
-          className='contactIcon'
-          src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png"
-          style={{height:'200px', width:'auto'}}
-          /></a>
+            <img
+              className='contactIcon'
+              src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png"
+              style={{ height: '200px', width: 'auto' }}
+            /></a>
 
         </div>
 
@@ -122,17 +112,7 @@ const App = () => {
       <div ref={resumeRef} className="section">
         <h2 className="Title">Resume</h2>
         <p className="Subtitle">Take a look...</p>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+
       </div>
 
       <div className="buttonDiv">

@@ -13,16 +13,16 @@
   flex-shrink: 1;
   color: #F5F5F5;
   background-color: #30475E;
-  font-family:monospace;
+  font-family: monospace;
   font-size: 200%;
-/* sticky nav */
+  /* sticky nav */
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
 }
 
-.Nav a{
+.Nav a {
   display: flex;
   transition: transform 0.5s;
   transition: 0.4s;
@@ -30,7 +30,8 @@
   border-radius: 5px;
 
 }
-.Nav h3{
+
+.Nav h3 {
   display: flex;
   /* align-items: flex-start; */
   transition: transform 0.5s;
@@ -45,6 +46,7 @@
   color: #F7F6F2;
   background-color: #F05454;
 }
+
 .Nav h3:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -62,19 +64,25 @@
   .Nav a {
     display: none;
   }
+
   .Nav h3 {
-     margin-left: 25%;
-     font-size: 175%;
-    }
+    margin-left: 25%;
+    font-size: 175%;
+  }
+
   .Nav h3:hover {
     cursor: pointer;
     transform: scale(1);
     background-color: #30475E;
 
   }
+
+
   .Nav a {
     margin-left: 0;
   }
+
+
 }
 
 
@@ -88,12 +96,12 @@
   margin-left: 25%;
 }
 
- .Header {
+.Header {
   height: 100vh;
   padding-top: 10vh;
   background-color: #30475E;
   color: #F5F5F5;
-  font-family:monospace;
+  font-family: monospace;
   font-size: 200%;
   padding-bottom: 2vh;
   animation: fade 1.9s ease-in;
@@ -114,11 +122,13 @@
 }
 
 .section {
+
+
   padding-top: 10vh;
   height: 100vh;
   background-color: #F5F5F5;
   color: #30475E;
-  font-family:monospace;
+  font-family: monospace;
   font-size: 200%;
 }
 
@@ -131,18 +141,23 @@
 }
 
 .contactIcon {
+  border-radius: 50%;
   transition: transform 0.5s;
+  transition: 0.4s;
 }
 
 .contactIcon:hover {
   transform: scale(1.1);
   cursor: pointer;
+  color: #F7F6F2;
+  background-color: #F05454;
 }
 
 .buttonDiv {
   display: flex;
   justify-content: left;
   padding: 2vh;
+
   /* sticky */
   position: fixed;
   bottom: 0;
@@ -153,10 +168,9 @@
 
 .button {
   /* back to top button */
-  background-color: #F7F6F2 ;
   border: none;
   color: #30475E;
-  font-family:monospace;
+  font-family: monospace;
   text-decoration: none;
   display: inline-block;
   font-size: 50px;
