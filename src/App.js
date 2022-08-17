@@ -66,7 +66,9 @@ const App = () => {
         </div>
       </div>
 
-      <div ref={aboutRef} className="section">
+      <div ref={aboutRef}
+        className="aboutSection"
+      >
         <h2 className="Title">About</h2>
         <p className="Subtitle">A little bit about myself...</p>
 
