@@ -93,7 +93,8 @@
 
 .Subtitle {
   margin-top: 0;
-  margin-left: 25%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .Header {
@@ -136,8 +137,11 @@
 }
 
 .aboutBox {
+  display: block;
+
   z-index: 20;
   background-color: #30475E;
+
   opacity: 95%;
   height: 50vh;
   width: 70vw;

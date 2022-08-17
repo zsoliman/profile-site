@@ -70,7 +70,7 @@ const App = () => {
         <div className='aboutBox'>
 
           <h2 className="Title">About</h2>
-          <p className="Subtitle">A little bit about myself...</p>
+          <p className="Subtitle">A little bit about myself... <br /> <br /> New York City Paramedic turned Software Engineer: <br /> Learning to code has always been an interest of mine, but only recently has it become a reality. After eight years working in the world of EMS, I dedicated my time to changing careers into something I can truly see myself doing.</p>
 
         </div>
       </div>
