@@ -66,15 +66,17 @@ const App = () => {
         </div>
       </div>
 
-      <div ref={aboutRef}
-        className="aboutSection"
-      >
-        <h2 className="Title">About</h2>
-        <p className="Subtitle">A little bit about myself...</p>
+      <div ref={aboutRef} className="aboutSection">
+        <div className='aboutBox'>
 
+          <h2 className="Title">About</h2>
+          <p className="Subtitle">A little bit about myself...</p>
+
+        </div>
       </div>
 
       <div ref={projectRef} className="section">
+
         <h2 className="Title">Projects</h2>
         <p className="Subtitle">Here's some work I've done...</p>
 

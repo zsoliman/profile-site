@@ -123,7 +123,7 @@
 
 .aboutSection {
   padding-top: 10vh;
-  color: #30475E;
+  color: #F5F5F5;
   background-color: #F5F5F5;
   font-family: monospace;
   font-size: 200%;
@@ -134,6 +134,21 @@
   opacity: 70%;
 
 }
+
+.aboutBox {
+  z-index: 20;
+  background-color: #30475E;
+  opacity: 95%;
+  height: 50vh;
+  width: 70vw;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  border-radius: 25px;
+}
+
+
 
 .section {
   padding-top: 10vh;
