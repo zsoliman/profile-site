@@ -95,6 +95,7 @@
   margin-top: 0;
   margin-left: 10%;
   margin-right: 10%;
+
 }
 
 .Header {
@@ -201,6 +202,10 @@
   width: 100%;
   z-index: 2;
 }
+
+/* .hidden {
+  display: none;
+} */
 
 .button {
   /* back to top button */

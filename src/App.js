@@ -40,6 +40,12 @@ const App = () => {
     };
   }, []);
 
+  // function hideButton(handleScroll) {
+  //   return (handleScroll ? true : false)
+  // }
+
+  //   console.log(hidebutton(true))
+
   return (
 
     <div className="App">
