@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useRef, useEffect } from 'react'
+import AmbulanceLights from './video/ambulanceLights.mp4';
 
 const App = () => {
 
@@ -73,6 +73,14 @@ const App = () => {
       </div>
 
       <div ref={aboutRef} className="aboutSection">
+        <video
+          className='video'
+          autoPlay
+          loop
+          muted>
+          <source src={AmbulanceLights} type='video/mp4' />
+        </video>
+
         <div className='aboutBox'>
 
           <h2 className="Title">About</h2>
