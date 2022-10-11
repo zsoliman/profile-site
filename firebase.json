@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "/home/zsoliman/code/create/profile_site_",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
