@@ -62,9 +62,9 @@ const App = () => {
 
       <div ref={titleRef} className="Header">
         <div className='HeaderContainer'>
-          <p style={{ paddingTop: '20px' }} className="Subtitle">hi, my name is...</p>
+          {/* <p style={{ paddingTop: '20px' }} className="Subtitle">hi, my name is...</p> */}
           <h1 className="Title">Zach Soliman</h1>
-          <p className="Subtitle">and I'm a...</p>
+          {/* <p className="Subtitle">and I'm a...</p> */}
           <h2
             style={{ paddingBottom: '20px' }}
             className="Title"
@@ -84,7 +84,10 @@ const App = () => {
         <div className='aboutBox'>
 
           <h2 className="Title">About</h2>
-          <p className="Subtitle">A little bit about myself... <br /> <br /> New York City Paramedic turned Software Engineer: <br /> Learning to code has always been an interest of mine, but only recently has it become a reality. After eight years working in the world of EMS, I dedicated my time to changing careers into something I can truly see myself doing.</p>
+          <p className="Subtitle">
+            A little bit about myself...
+            <br /> <br />
+            New York City Paramedic turned Software Engineer: <br /> Learning to code has always been an interest of mine, but only recently has it become a reality. After eight years working in the world of EMS, I dedicated my time to changing careers into something I can truly see myself doing.</p>
 
         </div>
       </div>
