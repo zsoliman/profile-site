@@ -30,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log('window.scrollY', window.scrollY);
+      // console.log('window.scrollY', window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -133,9 +133,9 @@ const App = () => {
 
       </div>
 
-      <div className="buttonDiv">
+      {/* <div className="buttonDiv">
         <button className="button" onClick={handleTitleClick}>&#8593;</button>
-      </div>
+      </div> */}
 
 
     </div>
