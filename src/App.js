@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useRef, useEffect } from 'react'
 import AmbulanceLights from './video/ambulanceLights.mp4';
+import drinkupnav from './video/drinkupnav.png';
+import favicon from './video/favicon.ico';
 
 const App = () => {
 
@@ -63,16 +65,17 @@ const App = () => {
       <div ref={titleRef} className="Header">
         <div className='HeaderContainer'>
           {/* <p style={{ paddingTop: '20px' }} className="Subtitle">hi, my name is...</p> */}
-          <h1 className="Title">Zach Soliman</h1>
+          <h1 className="HomeTitle">Zach Soliman</h1>
           {/* <p className="Subtitle">and I'm a...</p> */}
           <h2
             style={{ paddingBottom: '20px' }}
-            className="Title"
-          >Software Engineer</h2>
+            className="HomeSubTitle"
+          >Software Engineer<br />Web Development<br />Based in Brooklyn</h2>
         </div>
       </div>
 
       <div ref={aboutRef} className="aboutSection">
+
         <video
           className='video'
           autoPlay
@@ -83,11 +86,12 @@ const App = () => {
 
         <div className='aboutBox'>
 
-          <h2 className="Title">About</h2>
+          <h2 className="Title" style={{ paddingTop: '10vh' }}>About</h2>
           <p className="Subtitle">
-            A little bit about myself...
-            <br /> <br />
-            New York City Paramedic turned Software Engineer: <br /> Learning to code has always been an interest of mine, but only recently has it become a reality. After eight years working in the world of EMS, I dedicated my time to changing careers into something I can truly see myself doing.</p>
+            New York City Paramedic turned Software Engineer: <br /> <br />Learning to develop code has always been of interest, but only recently has it become a reality. After nearly 8 years of NYC EMS, I've learned valuable skills including leadership, teamwork, and making important decisions under pressure. These are some of the many skills being carried over into the tech industry. <br /> <br />
+            I'm Zach, a full-stack software developer with a focus in React.js, Ruby on Rails, and much much more.
+
+          </p>
 
         </div>
       </div>
@@ -96,6 +100,15 @@ const App = () => {
 
         <h2 className="Title">Projects</h2>
         <p className="Subtitle">Here's some work I've done...</p>
+
+        <div className='projectlist'>
+          <a className='drinkup' href="https://github.com/zsoliman/drink-up" target='_blank' >
+            <img className='projectimg' src={drinkupnav} /></a>
+
+          <a className='projectbtn' href='https://github.com/zsoliman/profile-site' target='_blank'>
+            <img className='projectimg' src={favicon} />
+          </a>
+        </div>
 
       </div>
 
@@ -132,7 +145,45 @@ const App = () => {
 
       <div ref={resumeRef} className="section">
         <h2 className="Title">Resume</h2>
-        <p className="Subtitle">Take a look...</p>
+        <div className='resume-container'>
+          <div className='resume-column1'>
+            <h3>Technical Skills:</h3>
+            <li>Javascript</li>
+            <li>React.js</li>
+            <li>Redux</li>
+            <li>Ruby</li>
+            <li>Ruby on Rails</li>
+            <li>REST API</li>
+            <li>PostgreSQl</li>
+            <li>SQLite</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Version Control</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </div>
+          <div className='resume-column2'>
+
+            <h3>Experience:</h3>
+            <p style={{ textDecoration: 'underline' }}>Freelance Software Engineer</p>
+            <li>Created custom profile sites for clients.</li>
+            <li>Researched similar products already deployed on the web and utilizing the clients vision to design the product.</li>
+            <li>Built custom React.js web applications for use by the client in their buisness ventures.</li>
+            <p style={{ textDecoration: 'underline' }}>Flatiron School</p>
+            <li>Full Stack intensive software engineering bootcamp.</li>
+            <li>3.5 months of daily learning focused on React.js and Ruby on Rails development.</li>
+            <p style={{ textDecoration: 'underline' }}>NYC Paramedic</p>
+            <li>Lead teams of first responders in organized responses through constantly developing scenarios.</li>
+            <li>Responded to 911 calls for medical emergencies throughout the City of New York.</li>
+            <li>Treated and stabilized patients experiencing potentially life threatening emergencies.</li>
+          </div>
+
+        </div>
+
+        <div className='footer'>
+          <p>Zach Soliman © 2022</p>
+        </div>
+
 
       </div>
 
