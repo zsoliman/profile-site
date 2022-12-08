@@ -1,44 +1,59 @@
-import './App.css';
-import React, { useRef, useEffect } from 'react'
-import AmbulanceLights from './video/ambulanceLights.mp4';
-import drinkupnav from './video/drinkupnav.png';
-import favicon from './video/favicon.ico';
+import "./App.css";
+import React, { useRef, useEffect } from "react";
+import AmbulanceLights from "./video/ambulanceLights.mp4";
+import drinkupnav from "./video/drinkupnav.png";
+import favicon from "./video/favicon.ico";
+import ZSolimanResume from "./resume/ZSolimanResume.pdf"
+import { pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudfare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
+
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4'
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1
+  }
+});
 
 const App = () => {
-
-
   // useRef allows scroll-to-element
-  const titleRef = useRef()
-  const aboutRef = useRef()
-  const projectRef = useRef()
-  const contactRef = useRef()
-  const resumeRef = useRef()
+  const titleRef = useRef();
+  const aboutRef = useRef();
+  const projectRef = useRef();
+  const contactRef = useRef();
+  const resumeRef = useRef();
 
   const handleTitleClick = () => {
-    titleRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+    titleRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   const handleAboutClick = () => {
-    aboutRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+    aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   const handleProjectClick = () => {
-    projectRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+    projectRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   const handleContactClick = () => {
-    contactRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   const handleResumeClick = () => {
-    resumeRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+    resumeRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       // console.log('window.scrollY', window.scrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -49,104 +64,130 @@ const App = () => {
   //   console.log(hidebutton(true))
 
   return (
-
     <div className="App">
-
       <div className="Nav">
         <h3 onClick={handleTitleClick}>ZS</h3>
-        <button className="menuButton">Menu</button> {/* hidden menu button, not currently doing anything */}
-        <a onClick={handleAboutClick} >about</a>
-        <a onClick={handleProjectClick} >projects</a>
-        <a onClick={handleContactClick} >contact</a>
-        <a onClick={handleResumeClick} >resume</a>
+        <button className="menuButton">Menu</button>{" "}
+        {/* hidden menu button, not currently doing anything */}
+        <a onClick={handleAboutClick}>about</a>
+        <a onClick={handleProjectClick}>projects</a>
+        <a onClick={handleContactClick}>contact</a>
+        <a onClick={handleResumeClick}>resume</a>
       </div>
 
-
       <div ref={titleRef} className="Header">
-        <div className='HeaderContainer'>
+        <div className="HeaderContainer">
           {/* <p style={{ paddingTop: '20px' }} className="Subtitle">hi, my name is...</p> */}
           <h1 className="HomeTitle">Zach Soliman</h1>
           {/* <p className="Subtitle">and I'm a...</p> */}
-          <h2
-            style={{ paddingBottom: '20px' }}
-            className="HomeSubTitle"
-          >Software Engineer<br />Web Development<br />Based in Brooklyn</h2>
+          <h2 style={{ paddingBottom: "20px" }} className="HomeSubTitle">
+            Software Engineer
+            <br />
+            Web Development
+            <br />
+            Based in Brooklyn
+          </h2>
         </div>
       </div>
 
       <div ref={aboutRef} className="aboutSection">
-
-        <video
-          className='video'
-          autoPlay
-          loop
-          muted>
-          <source src={AmbulanceLights} type='video/mp4' />
+        <video className="video" autoPlay loop muted>
+          <source src={AmbulanceLights} type="video/mp4" />
         </video>
 
-        <div className='aboutBox'>
-
-          <h2 className="Title" style={{ paddingTop: '10vh' }}>About</h2>
+        <div className="aboutBox">
+          <h2 className="Title" style={{ paddingTop: "10vh" }}>
+            About
+          </h2>
           <p className="Subtitle">
-            New York City Paramedic turned Software Engineer: <br /> <br />Learning to develop code has always been of interest, but only recently has it become a reality. After nearly 8 years of NYC EMS, I've learned valuable skills including leadership, teamwork, and making important decisions under pressure. These are some of the many skills being carried over into the tech industry. <br /> <br />
-            I'm Zach, a full-stack software developer with a focus in React.js, Ruby on Rails, and much much more.
-
+            New York City Paramedic turned Software Engineer: <br /> <br />
+            Learning to develop code has always been of interest, but only
+            recently has it become a reality. After nearly 8 years of NYC EMS,
+            I've learned valuable skills including leadership, teamwork, and
+            making important decisions under pressure. These are some of the
+            many skills being carried over into the tech industry. <br /> <br />
+            I'm Zach, a full-stack software developer with a focus in React.js,
+            Ruby on Rails, and much much more.
           </p>
-
         </div>
       </div>
 
       <div ref={projectRef} className="section">
-
         <h2 className="Title">Projects</h2>
         <p className="Subtitle">Here's some work I've done...</p>
 
-        <div className='projectlist'>
-          <a className='drinkup' href="https://github.com/zsoliman/drink-up" target='_blank' >
-            <img className='projectimg' src={drinkupnav} /></a>
+        <div className="projectlist">
+          <a
+            className="drinkup"
+            href="https://github.com/zsoliman/drink-up"
+            target="_blank"
+          >
+            <img className="projectimg" src={drinkupnav} />
+          </a>
 
-          <a className='projectbtn' href='https://github.com/zsoliman/profile-site' target='_blank'>
-            <img className='projectimg' src={favicon} />
+          <a
+            className="projectbtn"
+            href="https://github.com/zsoliman/profile-site"
+            target="_blank"
+          >
+            <img className="projectimg" src={favicon} />
           </a>
         </div>
-
       </div>
 
       <div ref={contactRef} className="section">
         <h2 className="Title">Contact</h2>
         <p className="Subtitle">A few ways to get in touch...</p>
-        <div className='contact'>
-
+        <div className="contact">
           <a href="https://github.com/zsoliman" target="_blank">
             <img
-              className='contactIcon'
+              className="contactIcon"
               src="https://img.icons8.com/glyph-neue/344/github.png"
-              style={{ height: '200px', width: 'auto' }}
-            /></a>
+              style={{ height: "200px", width: "auto" }}
+            />
+          </a>
 
-          <a href="https://www.linkedin.com/in/zachsoliman/" target='_blank'>
+          <a href="https://www.linkedin.com/in/zachsoliman/" target="_blank">
             <img
-              className='contactIcon'
+              className="contactIcon"
               src="https://img.icons8.com/glyph-neue/344/linkedin.png"
-              style={{ height: '200px', width: 'auto' }}
-            /></a>
+              style={{ height: "200px", width: "auto" }}
+            />
+          </a>
 
-          <a href="https://medium.com/@zachsoliman" target='_blank'>
+          <a href="https://medium.com/@zachsoliman" target="_blank">
             <img
-              className='contactIcon'
+              className="contactIcon"
               src="https://img.icons8.com/ios-filled/344/medium-monogram--v1.png"
-              style={{ height: '200px', width: 'auto' }}
-            /></a>
-
+              style={{ height: "200px", width: "auto" }}
+            />
+          </a>
         </div>
-
-
       </div>
 
       <div ref={resumeRef} className="section">
+
+        <Document
+          file={ZSolimanResume}
+          onLoadError={console.error}>
+
+          <Page pageIndex={0} />
+        </Document>
+
+        <Document>
+          <Page size="A4" style={styles.page}>
+            <View style={styles.section}>
+              <Text>Section #1</Text>
+            </View>
+            <View style={styles.section}>
+              <Text>Section #2</Text>
+            </View>
+          </Page>
+        </Document>
+
         <h2 className="Title">Resume</h2>
-        <div className='resume-container'>
-          <div className='resume-column1'>
+        <div className="resume-container">
+          <div className="resume-column1">
             <h3>Technical Skills:</h3>
             <li>Javascript</li>
             <li>React.js</li>
@@ -162,38 +203,52 @@ const App = () => {
             <li>HTML</li>
             <li>CSS</li>
           </div>
-          <div className='resume-column2'>
-
+          <div className="resume-column2">
             <h3>Experience:</h3>
-            <p style={{ textDecoration: 'underline' }}>Freelance Software Engineer</p>
+            <p style={{ textDecoration: "underline" }}>
+              Freelance Software Engineer
+            </p>
             <li>Created custom profile sites for clients.</li>
-            <li>Researched similar products already deployed on the web and utilizing the clients vision to design the product.</li>
-            <li>Built custom React.js web applications for use by the client in their buisness ventures.</li>
-            <p style={{ textDecoration: 'underline' }}>Flatiron School</p>
+            <li>
+              Researched similar products already deployed on the web and
+              utilizing the clients vision to design the product.
+            </li>
+            <li>
+              Built custom React.js web applications for use by the client in
+              their buisness ventures.
+            </li>
+            <p style={{ textDecoration: "underline" }}>Flatiron School</p>
             <li>Full Stack intensive software engineering bootcamp.</li>
-            <li>3.5 months of daily learning focused on React.js and Ruby on Rails development.</li>
-            <p style={{ textDecoration: 'underline' }}>NYC Paramedic</p>
-            <li>Lead teams of first responders in organized responses through constantly developing scenarios.</li>
-            <li>Responded to 911 calls for medical emergencies throughout the City of New York.</li>
-            <li>Treated and stabilized patients experiencing potentially life threatening emergencies.</li>
+            <li>
+              3.5 months of daily learning focused on React.js and Ruby on Rails
+              development.
+            </li>
+            <p style={{ textDecoration: "underline" }}>NYC Paramedic</p>
+            <li>
+              Lead teams of first responders in organized responses through
+              constantly developing scenarios.
+            </li>
+            <li>
+              Responded to 911 calls for medical emergencies throughout the City
+              of New York.
+            </li>
+            <li>
+              Treated and stabilized patients experiencing potentially life
+              threatening emergencies.
+            </li>
           </div>
-
         </div>
 
-        <div className='footer'>
+        <div className="footer">
           <p>Zach Soliman © 2022</p>
         </div>
-
-
       </div>
 
       {/* <div className="buttonDiv">
         <button className="button" onClick={handleTitleClick}>&#8593;</button>
       </div> */}
-
-
     </div>
   );
-}
+};
 
 export default App;

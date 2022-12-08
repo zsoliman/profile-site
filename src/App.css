@@ -196,15 +196,11 @@
     top: 150%;
     /* left: 50%; */
     transform: translate(-50%);
-
-
   }
 
   .aboutSection {
     height: max-content;
     opacity: 99%;
-
-
   }
 
   .Nav {
