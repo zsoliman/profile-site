@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import AmbulanceLights from './video/ambulanceLights.mp4';
 import drinkupnav from './video/drinkupnav.png';
 import favicon from './video/favicon.ico';
@@ -49,6 +49,8 @@ const App = () => {
 
   //   console.log(hidebutton(true))
 
+  const showProjectDescription = useState(true)
+
   return (
 
     <div className="App">
@@ -73,7 +75,7 @@ const App = () => {
           <h2
             style={{ paddingBottom: '20px' }}
             className="HomeSubTitle"
-          >Software Engineer<br />Web Development<br />Based in Brooklyn</h2>
+          >Software Engineering<br />Web Development<br />Based in Brooklyn</h2>
         </div>
       </div>
 
@@ -105,8 +107,18 @@ const App = () => {
         <p className="Subtitle">Here's some work I've done...</p>
 
         <div className='projectlist'>
+
           <a className='drinkup' href="https://github.com/zsoliman/drink-up" target='_blank' >
-            <img className='projectimg' src={drinkupnav} /></a>
+            <img className='projectimg' src={drinkupnav} />
+          </a>
+
+          <div className={`projectCard${showProjectDescription ? ' hidden' : ''}`}>
+            <a>Created as a final project <br />at the Flatiron School.</a> <br />
+            <a>Cocktail API-based user <br /> interface to search drink <br /> recipies and save liked <br /> selections.</a> <br />
+            <a>React.js front end, utilizing <br /> Redux and an outside API.</a><br />
+            <a>Ruby on Rails back end<br /> built witha PostgreSQL <br /> based database, storing <br /> users, favorites, and selected <br />recipes.</a> <br />
+            <a href="https://github.com/zsoliman/drink-up" target='_blank'>Click to see the github!</a>
+          </div>
 
           <a className='projectbtn' href='https://github.com/zsoliman/profile-site' target='_blank'>
             <img className='projectimg' src={favicon} />
