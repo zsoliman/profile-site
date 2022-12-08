@@ -93,7 +93,7 @@
   align-items: center;
   margin: 0;
   padding: 2vh;
-  font-size: .65em;
+  font-size: 1.5em;
   background-color: #EEEEEE;
   color: #222831;
   /* margin-top: 2vh; */
@@ -109,7 +109,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 200%;
   padding-bottom: 2vh;
-  animation: fade 1.9s ease-in;
+  animation: fade 0.5s ease-in;
 }
 
 .HeaderContainer {
@@ -148,12 +148,14 @@
 }
 
 .Nav a {
+  color: #EEEEEE;
   display: flex;
   transition: transform 0.5s;
   transition: 0.4s;
   padding: 15px 32px;
   border-radius: 5px;
   font-size: 175%;
+  text-decoration: none;
 }
 
 .Nav h3 {
@@ -390,7 +392,7 @@
 
 .section {
   /* padding-top: 10vh; */
-  height: 100vh;
+  height: 90vh;
   background-color: #EEEEEE;
   color: #222831;
   /* font-family: 'Open Sans', sans-serif; */

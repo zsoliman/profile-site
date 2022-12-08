@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react'
 import AmbulanceLights from './video/ambulanceLights.mp4';
 import drinkupnav from './video/drinkupnav.png';
 import favicon from './video/favicon.ico';
+import ZSolimanResume from './resume/ZSolimanResume.pdf'
 
 const App = () => {
 
@@ -58,7 +59,9 @@ const App = () => {
         <a onClick={handleAboutClick} >about</a>
         <a onClick={handleProjectClick} >projects</a>
         <a onClick={handleContactClick} >contact</a>
-        <a onClick={handleResumeClick} >resume</a>
+        <a
+          // onClick={handleResumeClick}
+          href={ZSolimanResume} target="_blank" >resume</a>
       </div>
 
 
@@ -139,11 +142,9 @@ const App = () => {
             /></a>
 
         </div>
-
-
       </div>
 
-      <div ref={resumeRef} className="section">
+      {/* <div ref={resumeRef} className="section">
         <h2 className="Title">Resume</h2>
         <div className='resume-container'>
           <div className='resume-column1'>
@@ -162,6 +163,7 @@ const App = () => {
             <li>HTML</li>
             <li>CSS</li>
           </div>
+
           <div className='resume-column2'>
 
             <h3>Experience:</h3>
@@ -179,12 +181,10 @@ const App = () => {
           </div>
 
         </div>
+      </div > */}
 
-        <div className='footer'>
-          <p>Zach Soliman © 2022</p>
-        </div>
-
-
+      <div className='footer'>
+        <p>Zach Soliman © 2022</p>
       </div>
 
       {/* <div className="buttonDiv">
@@ -192,7 +192,7 @@ const App = () => {
       </div> */}
 
 
-    </div>
+    </div >
   );
 }
 
