@@ -123,9 +123,14 @@ const App = () => {
             <a href="https://github.com/zsoliman/drink-up" target='_blank'>Click to see the github!</a>
           </div>
 
-          <a className='projectbtn' href='https://github.com/zsoliman/profile-site' target='_blank'>
+          <a className='projectbtn' onClick={toggleProjectDesc}>
             <img className='projectimg' src={favicon} />
           </a>
+
+          <div className={`projectCard${projectDescription ? ', hidden' : ''}`}>
+            <a>test</a>
+            <a href='https://github.com/zsoliman/profile-site' target='_blank'></a>
+          </div>
         </div>
 
       </div>
