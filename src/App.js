@@ -115,12 +115,16 @@ const App = () => {
             <img className='projectimg' src={drinkupnav} />
           </a>
 
-          <div className={`projectCard${projectDescription ? ', hidden' : ''}`}>
-            <a>Created as a final project <br />at the Flatiron School.</a> <br />
-            <a>Cocktail API-based user <br /> interface to search drink <br /> recipies and save liked <br /> selections.</a> <br />
-            <a>React.js front end, utilizing <br /> Redux and an outside API.</a><br />
-            <a>Ruby on Rails back end<br /> built witha PostgreSQL <br /> based database, storing <br /> users, favorites, and selected <br />recipes.</a> <br />
-            <a href="https://github.com/zsoliman/drink-up" target='_blank'>Click to see the github!</a>
+          <div className={`projectCardBackground${projectDescription ? ', hidden' : ''}`}
+            onClick={toggleProjectDesc}>
+
+            <div className={`projectCard${projectDescription ? ', hidden' : ''}`}>
+              <a>Created as a final project <br />at the Flatiron School.</a> <br />
+              <a>Cocktail API-based user <br /> interface to search drink <br /> recipies and save liked <br /> selections.</a> <br />
+              <a>React.js front end, utilizing <br /> Redux and an outside API.</a><br />
+              <a>Ruby on Rails back end<br /> built witha PostgreSQL <br /> based database, storing <br /> users, favorites, and selected <br />recipes.</a> <br />
+              <a href="https://github.com/zsoliman/drink-up" target='_blank'>Click to see the github!</a>
+            </div>
           </div>
 
           <a className='projectbtn' onClick={toggleProjectDesc}>
