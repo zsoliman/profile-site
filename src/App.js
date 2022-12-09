@@ -50,6 +50,9 @@ const App = () => {
   //   console.log(hidebutton(true))
 
   const [projectDescription, setProjectDescription] = useState(false)
+  const toggleProjectDesc = () => {
+    setProjectDescription(!projectDescription)
+  }
 
   return (
 
@@ -108,7 +111,7 @@ const App = () => {
 
         <div className='projectlist'>
 
-          <a className='drinkup' href="https://github.com/zsoliman/drink-up" target='_blank' >
+          <a className='drinkup' onClick={toggleProjectDesc} >
             <img className='projectimg' src={drinkupnav} />
           </a>
 
