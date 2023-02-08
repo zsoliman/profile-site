@@ -105,12 +105,20 @@ const App = () => {
         <p className="Subtitle">Here's some work I've done...</p>
 
         <div className='projectlist'>
-          <a className='drinkup' href="https://github.com/zsoliman/drink-up" target='_blank' >
-            <img className='projectimg' src={drinkupnav} /></a>
+          <div>
+            <a className='drinkup' href="https://github.com/zsoliman/drink-up" target='_blank' >
+              <img className='projectimg' src={drinkupnav} /></a>
+            <a href="https://github.com/zsoliman/drink-up" target='_blank'>Visit the Github</a> <br />
+            <a href="https://www.youtube.com/watch?v=o78iaXAQYjA" target='_blank'>View a Site Demo</a>
+          </div>
 
-          <a className='projectbtn' href='https://github.com/zsoliman/profile-site' target='_blank'>
-            <img className='projectimg' src={favicon} />
-          </a>
+          <div>
+            <a className='projectbtn' href='https://github.com/zsoliman/profile-site' target='_blank'>
+              <img className='projectimg' src={favicon} />
+            </a> <br />
+            <a href="https://github.com/zsoliman/profile-site" target='_blank'>Visit the Github</a> <br />
+            <a href='http://zachsoliman.com'>View this site</a>
+          </div>
         </div>
 
       </div>

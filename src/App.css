@@ -311,6 +311,8 @@
 }
 
 .drinkup {
+  display: flex;
+  flex-direction: column;
   width: 20vw;
   height: auto;
   background-color: #222831;
@@ -327,7 +329,10 @@
   align-items: center;
 }
 
-
+.projectlist a {
+  display: flex;
+  justify-content: center;
+}
 
 .resume-container {
   display: flex;
