@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react'
 import AmbulanceLights from './video/ambulanceLights.mp4';
 import drinkupnav from './video/drinkupnav.png';
 import favicon from './video/favicon.ico';
+import transparenz_logo from './video/transparenz_logo.PNG';
 import ZSolimanResume from './resume/ZSolimanResume.pdf'
 
 const App = () => {
@@ -118,6 +119,14 @@ const App = () => {
             </a> <br />
             <a href="https://github.com/zsoliman/profile-site" target='_blank'>Visit the Github</a> <br />
             <a href='http://zachsoliman.com'>View this site</a>
+          </div>
+
+          <div>
+            <a href='https://github.com/daragmas/TNZNZ-Health' target='_blank'>
+              <img className='projectimg' src={transparenz_logo} />
+            </a> <br />
+            <a href='https://github.com/daragmas/TNZNZ-Health' target='_blank'> Visit the Github</a> <br />
+            <a href='https://www.youtube.com/watch?v=rlaN6oAAYm4' target='_blank'>View a Site Demo</a>
           </div>
         </div>
 
