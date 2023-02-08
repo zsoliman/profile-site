@@ -168,53 +168,9 @@ const App = () => {
         </div>
       </div>
 
-      {/* <div ref={resumeRef} className="section">
-        <h2 className="Title">Resume</h2>
-        <div className='resume-container'>
-          <div className='resume-column1'>
-            <h3>Technical Skills:</h3>
-            <li>Javascript</li>
-            <li>React.js</li>
-            <li>Redux</li>
-            <li>Ruby</li>
-            <li>Ruby on Rails</li>
-            <li>REST API</li>
-            <li>PostgreSQl</li>
-            <li>SQLite</li>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>Version Control</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </div>
-
-          <div className='resume-column2'>
-
-            <h3>Experience:</h3>
-            <p style={{ textDecoration: 'underline' }}>Freelance Software Engineer</p>
-            <li>Created custom profile sites for clients.</li>
-            <li>Researched similar products already deployed on the web and utilizing the clients vision to design the product.</li>
-            <li>Built custom React.js web applications for use by the client in their buisness ventures.</li>
-            <p style={{ textDecoration: 'underline' }}>Flatiron School</p>
-            <li>Full Stack intensive software engineering bootcamp.</li>
-            <li>3.5 months of daily learning focused on React.js and Ruby on Rails development.</li>
-            <p style={{ textDecoration: 'underline' }}>NYC Paramedic</p>
-            <li>Lead teams of first responders in organized responses through constantly developing scenarios.</li>
-            <li>Responded to 911 calls for medical emergencies throughout the City of New York.</li>
-            <li>Treated and stabilized patients experiencing potentially life threatening emergencies.</li>
-          </div>
-
-        </div>
-      </div > */}
-
       <div className='footer'>
         <p>Zach Soliman © 2022</p>
       </div>
-
-      {/* <div className="buttonDiv">
-        <button className="button" onClick={handleTitleClick}>&#8593;</button>
-      </div> */}
-
 
     </div >
   );

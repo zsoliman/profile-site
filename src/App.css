@@ -221,9 +221,6 @@
 }
 
 .projectCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border: solid 1px black;
   position: absolute;
   background-color: white;
@@ -236,6 +233,10 @@
 
 .projectCardBackground {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   background-color: #000000cf;
